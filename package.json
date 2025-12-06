@@ -1,16 +1,17 @@
 {
-  "nombre": "carrito de compras",
-  "privado": true,
-  "versión": "0.0.0",
-  "tipo": "modulo",
-  "guiones": {
-    "despliegue": "npm run build",
-    "desplegar": "gh-pages -d dist",
-    "construir": "npx vite build",
-    "piedra": "eslint -c .eslintrc.cjs --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "vista previa": "vite build; vite preview --host"
+  "name": "tienda-de-plantas",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint -c .eslintrc.cjs --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
-  "dependencias": {
+  "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

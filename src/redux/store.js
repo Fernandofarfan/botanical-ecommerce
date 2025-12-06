@@ -1,33 +1,37 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { combineReducers } from "redux";
 import cartReducer from "./cartSlice";
-import reviewReducer from "./reviewSlice";
-import authReducer from "./authSlice";
-import wishlistReducer from "./wishlistSlice"; // ⬅️ Agregamos favoritos
+import wishlistReducer from "./wishlistSlice";
+import toastReducer from "./toastSlice";
+import couponReducer from "./couponSlice";
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["cart", "auth", "wishlist"], // ⬅️ Persistir favoritos
+  whitelist: ["cart", "wishlist", "coupon"],
 };
 
 
 const rootReducer = combineReducers({
   cart: cartReducer,
-  reviews: reviewReducer,
-  auth: authReducer,
-  wishlist: wishlistReducer, // ⬅️ Asegúrate de que está aquí
+  wishlist: wishlistReducer,
+  toast: toastReducer,
+  coupon: couponReducer,
 });
+
 
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const store = configureStore({
+export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: false,
+      serializableCheck: {
+        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
+      },
     }),
 });
 

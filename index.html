@@ -1,16 +1,96 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>E-Plant</title>
-  <meta name="keywords" content="Vite, React, plants, gardening, Air Purifying Plants, Aromatic Fragrant Plants, Insect Repellent Plants, Medicinal Plants, Low Maintenance Plants" />
 
-  <!-- Añadir aquí estas líneas para la fuente Roboto Slab -->
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#22c55e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Paradise Nursery" />
+
+  <!-- SEO Meta Tags -->
+  <title>Paradise Nursery - Tienda Online de Plantas | Envío a Todo el País</title>
+  <meta name="description"
+    content="Compra plantas de alta calidad en Paradise Nursery. Más de 500 variedades: plantas purificadoras, aromáticas, suculentas y más. Envío rápido y seguro. ¡Envío gratis en compras superiores a $50!" />
+  <meta name="keywords"
+    content="plantas online, comprar plantas, tienda de plantas, plantas purificadoras, plantas aromáticas, suculentas, cactus, plantas de interior, plantas de exterior, vivero online, jardinería, decoración con plantas" />
+  <meta name="author" content="Paradise Nursery" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href="https://paradisenursery.com" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://paradisenursery.com" />
+  <meta property="og:title" content="Paradise Nursery - Tienda Online de Plantas" />
+  <meta property="og:description"
+    content="Descubre más de 500 variedades de plantas. Calidad garantizada y envío a todo el país." />
+  <meta property="og:image" content="https://paradisenursery.com/og-image.jpg" />
+  <meta property="og:site_name" content="Paradise Nursery" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://paradisenursery.com" />
+  <meta name="twitter:title" content="Paradise Nursery - Tienda Online de Plantas" />
+  <meta name="twitter:description" content="Más de 500 variedades de plantas con envío a todo el país" />
+  <meta name="twitter:image" content="https://paradisenursery.com/twitter-image.jpg" />
+  <meta name="twitter:creator" content="@paradisenursery" />
+
+  <!-- Structured Data - Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Paradise Nursery",
+    "url": "https://paradisenursery.com",
+    "logo": "https://paradisenursery.com/logo.png",
+    "description": "Tienda online de plantas de alta calidad",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+34-XXX-XXX-XXX",
+      "contactType": "customer service",
+      "email": "info@paradisenursery.com"
+    },
+    "sameAs": [
+      "https://facebook.com/paradisenursery",
+      "https://instagram.com/paradisenursery",
+      "https://twitter.com/paradisenursery"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data - WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Paradise Nursery",
+    "url": "https://paradisenursery.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://paradisenursery.com/products?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
